@@ -1,4 +1,4 @@
-Status: \<[![Build Status](https://travis-ci.org/DreamTeamHR/TicTacToe.png)](https://travis-ci.org/DreamTeamHR/TicTacToe)\>
+[![Build Status](https://travis-ci.org/DreamTeamHR/TicTacToe.png)](https://travis-ci.org/DreamTeamHR/TicTacToe)
 # Late-term Assignment
 SC-T-303-HUGB, fall semester 2017.
 ## Purpose
