@@ -1,1 +1,10 @@
 language: java
+
+before_install:
+ - chmod +x gradlew
+
+deploy:
+  provider: heroku
+  app: sleepy-bastion-81869
+  api_key:
+    secure: de69637c-fefe-4907-a963-dc75b8f838a0
