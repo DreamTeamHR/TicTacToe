@@ -13,7 +13,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 // Define the main class for the application
-mainClassName = 'is.ru.tictactoe.TicTacToe'
+mainClassName = 'is.ru.tictactoe.TicTacToeWeb'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -25,6 +25,8 @@ repositories {
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:22.0'
+
+    compile 'com.sparkjava:spark-core:2.6.0'
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
