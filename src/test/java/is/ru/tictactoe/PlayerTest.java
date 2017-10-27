@@ -14,4 +14,12 @@ public class PlayerTest {
 		p.getPlayer1());
 	}
 
+	@Test
+	public void testPlayer2(){
+		Player p = new Player();
+		p.setPlayer2('L');
+		assertEquals('L',
+		p.getPlayer2());
+	}
+
 }
