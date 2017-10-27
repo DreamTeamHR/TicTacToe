@@ -1,5 +1,8 @@
 language: java
 
+before_install:
+ - chmod +x gradlew
+
 deploy:
   provider: heroku
   app: sleepy-bastion-81869
