@@ -1,10 +1,11 @@
 package is.ru.tictactoe;
 
 import java.util.Scanner;
+//import java.lang.System;
 
 public class Board {
 	
-	private char[][] board;
+	private static char[][] board;
 	private static final int SIZE = 3;
 
 	public Board() {
@@ -60,6 +61,110 @@ public class Board {
 
 	public static int boardSize() {
 		return SIZE;
+	}
+
+	public static boolean checkRows() {
+		
+		int countO = 0;
+		int countX = 0;
+		
+		for(int i = 0; i < SIZE; i++) {
+			for(int j = 0; j < SIZE; j++) {
+				if(board[i][j] == 'O') {
+					countO++;
+				}
+				if(board[i][j] == 'X') {
+					countX++;
+				}
+			}
+			if(countO == 3) {
+				System.out.println("Player2 wins!");
+				return true;
+			}
+			else if(countX == 3) {
+				System.out.println("Player1 wins!");
+				return true;
+			}
+			else {
+				countO = 0;
+				countX = 0;
+				return false;
+			}
+		}
+		return false;
+	}
+	
+	public boolean checkColumns() {
+		
+		int countO = 0;
+		int countX = 0;
+		
+		for(int i = 0; i < SIZE; i++) {
+			for(int j = 0; j < SIZE; j++) {
+				if(board[j][i] == 'O') {
+					countO++;
+				}
+				if(board[j][i] == 'X') {
+					countX++;
+				}
+			}
+			if(countO == 3) {
+				System.out.println("Player2 wins!");
+				return true;
+			}
+			else if(countX == 3) {
+				System.out.println("Player1 wins!");
+				return true;
+			}
+			else {
+				countO = 0;
+				countX = 0;
+			}
+		}
+		return false;
+	}
+	
+	public boolean checkCross() {
+		
+		if(board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O') {
+			System.out.println("Player2 wins!");
+			return true;
+		}
+		if(board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == 'O') {
+			System.out.println("Player2 wins!");
+			return true;
+		}
+		if(board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X') {
+			System.out.println("Player1 wins!");
+			return true;
+		}
+		if(board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X') {
+			System.out.println("Player1 wins!");
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public static boolean checkFull() {
+		
+		int fill = 0;
+		
+		for(int i = 0; i < SIZE; i++) {
+			for(int j = 0; j < SIZE; j++) {
+				if(board[i][j] == 'O' || board[i][j] == 'X') {
+					fill++;
+				}
+			}
+		}
+		
+		if(fill == 9) {
+			System.out.print("It's a draw!");
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 }
