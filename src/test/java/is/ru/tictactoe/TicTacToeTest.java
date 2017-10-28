@@ -128,5 +128,13 @@ public class TicTacToeTest {
 		assertEquals(false, t.getWinner());
 	}
 
+	@Test
+	public void testgetCurrPlayer() {
+		TicTacToe t = new TicTacToe();
+		t.changePlayer(t.getCurrPlayer());
+		t.newGame();
+		assertEquals('X', t.getCurrPlayer());
+	}
+
 
 }
