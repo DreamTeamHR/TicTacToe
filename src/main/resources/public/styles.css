@@ -34,15 +34,20 @@ img {
     left: 50%;
     width: 500px;
     height: 500px;
-    margin-left: -22%;
+    margin-left: -25%;
     border: solid 10px;
     border-color: white;
 }
 
+.game {
+    height: 100%;
+    width: 100%;
+}
+
 .board {
     float: left;
-    width: 33.33%;
-    height: 33.33%;
+    width: 33%;
+    height: 33.3%;
     cursor: pointer;
     border-width: 2px;
     border-color: #fff;
