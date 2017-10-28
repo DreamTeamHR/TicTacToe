@@ -23,3 +23,45 @@ footer {
     font-size: 12px;
     padding: 15px 0px;
 }
+
+img {
+  top: 20px;
+}
+
+.board-container {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    margin-left: -22%;
+    border: solid 10px;
+    border-color: white;
+}
+
+.board {
+    float: left;
+    width: 33.33%;
+    height: 33.33%;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: #fff;
+    will-change: border-color;
+}
+
+.board.left {
+    clear: both;
+    border-right-style: solid;
+}
+
+.board.top {
+    border-bottom-style: solid;
+}
+
+.board.right {
+    border-left-style: solid;
+}
+
+.board.bottom {
+    border-top-style: solid;
+}
