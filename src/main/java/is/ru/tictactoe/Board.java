@@ -1,16 +1,15 @@
 package is.ru.tictactoe;
 
-import java.util.Scanner;
-//import java.lang.System;
-
 public class Board {
 	
 	private static char[][] board;
 	private static final int SIZE = 3;
+	private boolean winnerIs; //true for player1, false for player2
 
 	public Board() {
 
 		this.board = new char[SIZE][SIZE];
+		winnerIs = false;
 
 		int count = 0;
 		for(int i = 0; i < SIZE; i++) {
@@ -21,7 +20,7 @@ public class Board {
 		}
 	}
 
-	public void updateBoard(char player) {
+	public void updateBoard(int move, char player) {
 
 		int first = 0;
 		int last = 0;
@@ -29,8 +28,6 @@ public class Board {
 
 		do {
 			valid = true;
-			Scanner choose = new Scanner(System.in);
-			int move = choose.nextInt();
 
 			if(move >= 1 && move <= 3) {
 				first = 0;
@@ -62,8 +59,20 @@ public class Board {
 	public static int boardSize() {
 		return SIZE;
 	}
+	
+	public void winnerX() {
+		winnerIs = true; //player 1 wins
+	}
+	
+	public void winnerO() {
+		winnerIs = false; //player 2 wins
+	}
+	
+	public boolean getWinner() {
+		return winnerIs;
+	}
 
-	public static boolean checkRows() {
+	public boolean checkRows() {
 		
 		int countO = 0;
 		int countX = 0;
@@ -78,11 +87,11 @@ public class Board {
 				}
 			}
 			if(countO == 3) {
-				System.out.println("Player2 wins!");
+				winnerO();
 				return true;
 			}
 			else if(countX == 3) {
-				System.out.println("Player1 wins!");
+				winnerX();
 				return true;
 			}
 			else {
@@ -109,11 +118,11 @@ public class Board {
 				}
 			}
 			if(countO == 3) {
-				System.out.println("Player2 wins!");
+				winnerO();
 				return true;
 			}
 			else if(countX == 3) {
-				System.out.println("Player1 wins!");
+				winnerX();
 				return true;
 			}
 			else {
@@ -127,19 +136,19 @@ public class Board {
 	public boolean checkCross() {
 		
 		if(board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O') {
-			System.out.println("Player2 wins!");
+			winnerO();
 			return true;
 		}
 		if(board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == 'O') {
-			System.out.println("Player2 wins!");
+			winnerO();
 			return true;
 		}
 		if(board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X') {
-			System.out.println("Player1 wins!");
+			winnerX();
 			return true;
 		}
 		if(board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X') {
-			System.out.println("Player1 wins!");
+			winnerX();
 			return true;
 		}
 		
@@ -159,7 +168,6 @@ public class Board {
 		}
 		
 		if(fill == 9) {
-			System.out.print("It's a draw!");
 			return true;
 		}
 		else {

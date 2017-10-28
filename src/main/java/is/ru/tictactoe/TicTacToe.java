@@ -1,12 +1,11 @@
 package is.ru.tictactoe;
 
-import java.util.Scanner;
-
 public class TicTacToe {
 	
 	private Board board;
 	private Player player;
 	private char currPlayer;
+	private int move;
 	private boolean winner;
 	private boolean draw;
 	
@@ -14,6 +13,7 @@ public class TicTacToe {
 		board = new Board();
 		player = new Player();
 		currPlayer = player.getPlayer1();
+		move = 0;
 		winner = false;
 		draw = false;
 	}
@@ -26,28 +26,27 @@ public class TicTacToe {
 		return player;
 	}
 	
-	public void playerMove() {
+	public void playerMove(int move, char currPlayer) {
 		
-		do {
-			System.out.print("Choose an available number between 1-9: ");
-			board.updateBoard(currPlayer);
-			//board.printBoard();
-			winner = isWinner();
-			draw = isDraw();
-			currPlayer = changePlayer(currPlayer, player);
-		} while(winner == false && draw == false);
+		board.updateBoard(move, currPlayer);
 	}
 	
-	public char changePlayer(char currPlayer, Player player) {
+	public void changePlayer(char currPlayer) {
 		
 		if(currPlayer == player.getPlayer1()) {
-			currPlayer = player.getPlayer2();
-			return currPlayer;
+			this.currPlayer = player.getPlayer2();
 		}
 		else {
-			currPlayer = player.getPlayer1();
-			return currPlayer;
+			this.currPlayer = player.getPlayer1();
 		}
+	}
+	
+	public char getCurrPlayer() {
+		return currPlayer;
+	}
+	
+	public boolean getWinner() {
+		return board.getWinner();
 	}
 	
 	public boolean isWinner() {
@@ -67,4 +66,5 @@ public class TicTacToe {
 	public boolean isDraw() {
 		return board.checkFull();
 	}
+
 }
