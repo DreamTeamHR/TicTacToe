@@ -1,3 +1,5 @@
+[![Code Coverage](https://img.shields.io/codecov/c/github/irisdogg/TicTacToe/codeCovBranch.svg)](https://codecov.io/gh/irisdogg/TicTacToe)
+
 [![Build Status](https://travis-ci.org/DreamTeamHR/TicTacToe.png)](https://travis-ci.org/DreamTeamHR/TicTacToe)
 # Late-term Assignment
 SC-T-303-HUGB, fall semester 2017.
