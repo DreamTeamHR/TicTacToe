@@ -1,22 +1,36 @@
 package is.ru.tictactoe;
 
+import spark.*;
 import static spark.Spark.*;
+import spark.servlet.SparkApplication;
 
-public class TicTacToeWeb
+public class TicTacToeWeb implements SparkApplication 
 {
-    public static void main(String[] args) 
+  public static void main(String[] args) 
+  {
+    staticFileLocation("/public");
+
+    SparkApplication web = new TicTacToeWeb();
+
+    String port = System.getenv("PORT");
+    if (port != null) 
     {
-        port(getHerokuPort());
-        get("/", (req, res) -> {
-            return "HEY ALEX";
-        });
+       port(Integer.valueOf(port));
     }
 
-    static int getHerokuPort() {
-        ProcessBuilder psb = new ProcessBuilder();
-    if (psb.environment().get("PORT") != null) {
-        return Integer.parseInt(psb.environment().get("PORT"));
-    }
-    return 4567;
-    }
+    web.init();
+  }
+
+  @Override
+  public void init() 
+  {
+    final TicTacToe game = new TicTacToe();
+    
+    post("/index", (req, res) -> 
+    {
+        int input = Integer.parseInt(req.queryParams("input"));
+        return res;
+    });
+    
+  }
 }
