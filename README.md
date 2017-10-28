@@ -1,4 +1,4 @@
-[![Code Coverage](https://img.shields.io/codecov/c/github/irisdogg/TicTacToe/codeCovBranch.svg)](https://codecov.io/gh/irisdogg/TicTacToe)
+[![Code Coverage](https://img.shields.io/codecov/c/github/irisdogg/TicTacToe/codeCovBranch.svg)](https://codecov.io/gh/DreamTeamHR/TicTacToe?branch=develop)
 
 [![Build Status](https://travis-ci.org/DreamTeamHR/TicTacToe.png)](https://travis-ci.org/DreamTeamHR/TicTacToe)
 # Late-term Assignment
