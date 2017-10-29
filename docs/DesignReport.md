@@ -22,12 +22,12 @@ Considering the time limit we decided to develop a simple program that allows th
 However, although we decided upon a simple program we decided to put our own mark on the project and themed it by the TV show 'Rick & Morty'. The players are then the main characters from the show respectively and the board is filled with images instead of the usual 'X' and 'O' marks for the players. 
 
 
-## Class diagram before implementation
+### Class diagram before implementation
 ![ClassDiagram](http://oi67.tinypic.com/33xd56w.jpg)
 
-## Class diagram after implementation
+### Class diagram after implementation
 
 
-## State diagram
+### State diagram
 ![StateDiagram](http://oi63.tinypic.com/35hdxsi.jpg)
 				
