@@ -3,6 +3,7 @@
 ## Programs
 The following programs are needed to run TicTacToe:
 - Java
+
 Also needed:
 - Git Bash (for Windows) or Terminal (on Mac OS)
 - An account on Github
