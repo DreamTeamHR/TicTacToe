@@ -2,8 +2,10 @@
 
 ## Programs
 The following programs are needed to run TicTacToe:
-- Git
 - Java
+Also needed:
+- Git Bash (for Windows) or Terminal (on Mac OS)
+- An account on Github
 
 ## Installation
 Clone git repository: https://github.com/DreamTeamHR/TicTacToe.git
@@ -14,11 +16,8 @@ Link to install Java: [Java]( http://www.oracle.com/technetwork/java/javase/down
 
 ## Run
 The following commands need to be run to be able to run DreamTeamHR's TicTacToe program:
-* ./gradlew build
-* ./gradlew run
-The following command needs to be run to create a javadoc:
-* ./gradlew javadoc 
-The following command needs to be run to run unit tests:
-* bin/unit_test
-The following command needs to be run to deploy:
-* bin/deploy
+* gradle build 
+  * This is to deploy and build the program
+* gradle run 
+  * This is the command to run the program on localhost
+  * To run the program locally use the link localhost:4567
