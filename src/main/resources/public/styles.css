@@ -23,3 +23,54 @@ footer {
     font-size: 12px;
     padding: 15px 0px;
 }
+
+.board-container img {
+    height: 160px;
+}
+
+.header img {
+    top: 20px;
+}
+
+.board-container {
+    position: center;
+    width: 500px;
+    height: 500px;
+    left: 27%;
+    top: 95%;
+    left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game {
+    height: 100%;
+    width: 100%;
+}
+
+.board {
+    float: left;
+    width: 33%;
+    height: 33.3%;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: #fff;
+    will-change: border-color;
+}
+
+.board.left {
+    clear: both;
+    border-right-style: solid;
+}
+
+.board.top {
+    border-bottom-style: solid;
+}
+
+.board.right {
+    border-left-style: solid;
+}
+
+.board.bottom {
+    border-top-style: solid;
+}
