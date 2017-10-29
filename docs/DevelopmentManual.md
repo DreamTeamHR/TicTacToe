@@ -2,7 +2,7 @@
 
 ## Introduction
 This is a development manual for a game called Tic Tac Toe made by DreamTeam for the course SC-T-303 Hugbúnaðarfræði at Reykjavik University. The source control client in use is github.
-This project is a remake of the well known game of Tic Tac Toe. If you are not familiar with Tic Tac Toe, you can find the rules of the game [here](https://en.wikipedia.org/wiki/Tic-tac-toe). It can be ccessed by opening a browser and following this [link](http://sleepy-bastion81869.herokuapp.com/).
+This project is a remake of the well known game of Tic Tac Toe. If you are not familiar with Tic Tac Toe, you can find the rules of the game [here](https://en.wikipedia.org/wiki/Tic-tac-toe). It can be accessed by opening a browser and following this [link](http://sleepy-bastion-81869.herokuapp.com/).
 
 ## Access to source
 You have to contact one of the administrators to get access to the source control. They will then give you access to the source code on github.
