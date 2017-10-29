@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="is.ru.tictactoe.SeleniumTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-10-29T17:02:25" hostname="DESKTOP-4PG8PFI" time="0.965">
+  <properties/>
+  <testcase name="titleMatches" classname="is.ru.tictactoe.SeleniumTests" time="0.965"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f) on port 39719
+Only local connections are allowed.
+Oct 29, 2017 5:02:23 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+Oct 29, 2017 5:02:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+</testsuite>
