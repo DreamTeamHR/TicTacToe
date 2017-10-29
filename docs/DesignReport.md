@@ -1,5 +1,6 @@
 # Design Report for TicTacToe
 *Fall 2017*
+
 ## Team
 #### Team name: 
 ***DreamTeam***
@@ -13,22 +14,23 @@
 * Kolbrún Hafdísardóttir
 * Sigrún Elva Reynisdóttir
 
+
 ## Introduction
 This document is a design report made for the course T-303 Hugbúnaðarfræði at Reykjavik University. 
 
+
 ## Design
 
+
 ## Class diagram
+![ClassDiagram](http://oi67.tinypic.com/33xd56w.jpg)
 
-##### UI layer
 
-##### Business layer
+## State diagram
+![StateDiagram](http://oi63.tinypic.com/35hdxsi.jpg)
+				
 
-##### Entity classess
-
-##### Data layer
-
-																				
 ## Implementation
+
 
 ## Testing
