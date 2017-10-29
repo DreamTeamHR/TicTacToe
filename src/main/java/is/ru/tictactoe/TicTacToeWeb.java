@@ -34,10 +34,10 @@ public class TicTacToeWeb implements SparkApplication
         t.playerMove(tileNo, t.getCurrPlayer());
         String play = t.getCurrPlayer() + "";
         if(play == "X") {
-          //play == mynd
+          play = "/img/rick.png";
         } 
         else {
-          //play == mynd
+          play = "/img/morty.png";
         }
 
         j.put("play", play);
