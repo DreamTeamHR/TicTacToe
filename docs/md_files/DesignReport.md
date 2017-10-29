@@ -23,10 +23,10 @@ However, although we decided upon a simple program we decided to put our own mar
 
 
 ### Class diagram before implementation
-![ClassDiagram](http://oi67.tinypic.com/33xd56w.jpg)
+![ClassDiagramBefore](http://oi64.tinypic.com/161aj5l.jpg)
 
 ### Class diagram after implementation
-
+![ClassDiagramAfter](http://oi64.tinypic.com/240x7xs.jpg)
 
 ### State diagram
 ![StateDiagram](http://oi63.tinypic.com/35hdxsi.jpg)
