@@ -2,13 +2,56 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Tic Tac Toe</title>
+        <title>DreamTeamHR' Tic Tac Toe</title>
         <link rel="stylesheet" type="text/css" href="styles.css"/>
-		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+            <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+            </script>
+            <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
+        <div class="header">
+            <img src="img/logo.png" height="160px" alt="DreamTeamHR"/></br>
+        </div>
+        <div class="board-container">
+            <div class="game">
+                <form class="board top left" method="post" action="/index" id="form1">
+                    <div class="tile" id="tile1"></div>
+                </form>
+                <form class="board top " method="post" action="/index" id="form2">
+                    <div class="tile" id="tile2"></div>
+                </form>
+                <form class="board top right" method="post" action="/index" id="form3">
+                    <div class="tile" id="tile3"></div>
+                </form>
+                <form class="board left" method="post" action="/index" id="form4">
+                    <div class="tile" id="tile4"></div>
+                </form>
+                <form class="board" method="post" action="/index" id="form5">
+                    <div class="tile" id="tile5"></div>
+                </form>
+                <form class="board right" method="post" action="/index" id="form6">
+                    <div class="tile" id="tile6"></div>
+                </form>
+                <form class="board bottom left" method="post" action="/index" id="form7">
+                    <div class="tile" id="tile7"></div>
+                </form>
+                <form class="board bottom" method="post" action="/index" id="form8">
+                    <div class="tile" id="tile8"></div>
+                </form>
+                <form class="board bottom right" method="post" action="/index" id="form9">
+                    <div class="title" id="tile9"></div>
+                </form>
+            </div>
+        </div>
+
+        <h1 id="gameOver">Rick make a move</h1>
+
+        <form id="btnID" method="post" action="/newGame">
+                <button id="BtnStyleID" type="reset" form="btnID">New Game</button>
+        </form>
     </body>
     <footer>
-            <p>&copy; 2017 - DreamTeamHR. All rights reserved.</p>
+        <p>&copy; 2017 - DreamTeamHR. All rights reserved.</p>
     </footer>
 </html>
