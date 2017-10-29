@@ -3,6 +3,7 @@ package is.ru.tictactoe;
 import spark.*;
 import static spark.Spark.*;
 import spark.servlet.SparkApplication;
+import org.json.simple.JSONObject;
 
 public class TicTacToeWeb implements SparkApplication 
 {
@@ -24,12 +25,53 @@ public class TicTacToeWeb implements SparkApplication
   @Override
   public void init() 
   {
-    final TicTacToe game = new TicTacToe();
-    
+    final TicTacToe t = new TicTacToe();
+
     post("/index", (req, res) -> 
     {
-        int input = Integer.parseInt(req.queryParams("input"));
-        return res;
+        JSONObject j = new JSONObject();
+        String tileNoS = req.queryParams("tileNumber");
+        int tileNo = (Integer.parseInt(tileNoS));
+        t.playerMove(tileNo, t.getCurrPlayer());
+        String play = t.getCurrPlayer() + "";
+        if(play == "X")
+        {
+          //play == mynd
+        } 
+        else
+        {
+          //play = mynd nema önnur mynd
+        }
+        j.put("play", play);
+
+        //winner
+        String endMessage = "";
+        boolean winner = false;
+
+        if(t.isWinner())
+        {
+            endMessage = t.getCurrPlayer() + "";
+            endMessage += " is the winner!";
+            t.newGame();
+            winner = true; 
+            j.put("isOver", endMessage);
+            return j; 
+        }
+        //check draw
+        if(t.isDraw())
+        {
+            endMessage = "Draw!";
+            t.newGame();
+            j.put("isOver", endMessage);
+            return j;
+        }
+        
+        j.put("isOver", endMessage);
+
+        t.changePlayer(t.getCurrPlayer());
+        String nextPlayer = t.getCurrPlayer() + " make a move";
+        j.put("currPlayer", nextPlayer);
+        return j;
     });
     
   }
