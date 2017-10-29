@@ -27,21 +27,19 @@ public class TicTacToeWeb implements SparkApplication
   {
     final TicTacToe t = new TicTacToe();
 
-    post("/index", (req, res) -> 
-    {
+    post("/index", (req, res) -> {
         JSONObject j = new JSONObject();
         String tileNoS = req.queryParams("tileNumber");
         int tileNo = (Integer.parseInt(tileNoS));
         t.playerMove(tileNo, t.getCurrPlayer());
         String play = t.getCurrPlayer() + "";
-        if(play == "X")
-        {
-          //play == mynd
+        if(play == "X") {
+          play = "/img/rick.png";
         } 
-        else
-        {
-          //play = mynd nema önnur mynd
+        else {
+          play = "/img/morty.png";
         }
+
         j.put("play", play);
 
         //winner
@@ -74,5 +72,12 @@ public class TicTacToeWeb implements SparkApplication
         return j;
     });
     
+    //new game
+    post("/newGame", (req, res) -> {
+        JSONObject o = new JSONObject();
+        o.put("empty","");
+        t.newGame();
+        return o;
+    });
   }
 }
