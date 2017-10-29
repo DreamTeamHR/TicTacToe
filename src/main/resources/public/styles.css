@@ -30,13 +30,9 @@ img {
 
 .board-container {
     position: absolute;
-    top: 95%;
-    left: 50%;
     width: 500px;
     height: 500px;
-    margin-left: -25%;
-    border: solid 10px;
-    border-color: white;
+    left: 27%;
 }
 
 .game {
