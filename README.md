@@ -12,11 +12,11 @@ This group, DreamTeam made a Rick and Morty version of the popular game tic tac 
 
 ### For further information please read the following manuals and reports:
 
-* [Development manual](docs/DevelopmentManual.md)
+* [Development manual](docs/md_files/DevelopmentManual.md)
 
-* [Administration manual](docs/AdministratorManual.md)
+* [Administration manual](docs/md_files/AdministratorManual.md)
 
-* [Design report](docs/DesignReport.md)
+* [Design report](docs/md_files/DesignReport.md)
 
 
 ### Group members:
