@@ -23,6 +23,10 @@ repositories {
     jcenter()
 }
 
+sourceSets {
+	selenium
+}
+
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:22.0'
@@ -31,6 +35,10 @@ dependencies {
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
+
+    seleniumCompile 'junit:junit:4.12'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.0.1'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.0.1'
 }
 
 jacocoTestReport {
@@ -53,5 +61,11 @@ task stage(dependsOn: installDist) {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.2.1'
+}
+
+task selenium(type: Test, dependsOn: installDist) {
+  testClassesDir = sourceSets.selenium.output.classesDir
+  classpath = sourceSets.selenium.runtimeClasspath
+
 }
 

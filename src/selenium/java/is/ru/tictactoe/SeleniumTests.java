@@ -10,6 +10,6 @@ public class SeleniumTests extends SeleniumTestsWrapper {
 @Test
 public void titleMatches() {
 	driver.get(baseUrl);
-	assertEquals("Tic Tac Toe", driver.getTitle());
+	assertEquals("DreamTeamHR' Tic Tac Toe", driver.getTitle());
 	}
 }
