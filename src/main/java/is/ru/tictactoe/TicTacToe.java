@@ -67,4 +67,9 @@ public class TicTacToe {
 		return board.checkFull();
 	}
 
+	public void newGame() {
+		board = new Board();
+		currPlayer = player.getPlayer1();
+	}
+
 }
