@@ -97,7 +97,6 @@ public class Board {
 			else {
 				countO = 0;
 				countX = 0;
-				return false;
 			}
 		}
 		return false;
