@@ -1,5 +1,10 @@
 language: java
 
+jdk:
+  - oraclejdk8
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
 before_install:
  - chmod +x gradlew
 
@@ -7,4 +12,4 @@ deploy:
   provider: heroku
   app: sleepy-bastion-81869
   api_key:
-    secure: de69637c-fefe-4907-a963-dc75b8f838a0
+    secure: f7C41qWFIWlODQLuQFCnZJ46ATyZqAhcjtGM+s4ZtCL8kSKcEQBYdTyKFLnRXOB9zLXUFMDB+kc950GaHc2uPqtW/3sJLvThyZBMDNSY8GMiBe5wo0KbbPd7lRNPPtOsiQwkM9cX6REoLVjFBdRfqu4qsuejnNSD9SJdHZuWm/rhUsSHT2hDTfORByqu/Iok5/fcnyEXzd0SjrnStw1VKLoRzdWP0oTYRxCFEZeyi9fMr4bOZR7DaXduih9ZdpTJ2KFvIZKekVMOXqBHPN4mq1XgQ2yMCzmwbsgE4uox1Hi34Nzxw11IHWQcgCSi54l8DHMsnZf6O77DuX3zwZsEv07Xoqf6SzvrmKvpEuyCGsjnWaK78GNAssuppPIqpNtNhVRC4OHOZWaKLrDat32kKrMOHHD/WkgnQ9r2qijZeHhbOfKBAN56PKLtwlFo4jojOUWV3YcAZMNNVUOroK2K2D6uZExaG/qlLbx98l/4Fy6Zrj8ckgn/PNs8UqhqEUrI3mXuLyUUwIWVz7XDUJt/vpIEpNLmwtofOenqaLWzg21cAPjQIjsXXeaY8lFmKLCuR3dILBj4hIPImSP6XB9/Onj34kH09RbazBLpdSinITnHUSvk4JnXMEQ4sDvZD9RSxfX4mP5d0SIV8pjJRF0w1b1oAurxGoxk+kvijaXdJ3c=
