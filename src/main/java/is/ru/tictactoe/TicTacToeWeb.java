@@ -7,6 +7,8 @@ import org.json.simple.JSONObject;
 
 public class TicTacToeWeb implements SparkApplication 
 {
+
+  boolean lockedBoard = false;
   public static void main(String[] args) 
   {
     staticFileLocation("/public");
@@ -34,17 +36,15 @@ public class TicTacToeWeb implements SparkApplication
         t.playerMove(tileNo, t.getCurrPlayer());
         String play = t.getCurrPlayer() + "";
         if(t.getCurrPlayer() == 'X') {
-          play = "/img/rick.png";
+            play = "/img/rick.png";
         } 
         else {
-          play = "/img/morty.png";
+            play = "/img/morty.png";
         }
 
         j.put("play", play);
-
         //winner
         String endMessage = "";
-        boolean lockedBoard = false;
 
         if(t.isWinner())
         {
@@ -81,12 +81,18 @@ public class TicTacToeWeb implements SparkApplication
             nextPlayer = "Morty make a move";
         }
         j.put("currPlayer", nextPlayer);
-        return j;
+        if(lockedBoard == false) {
+            return j;
+        }
+        else {
+            return null;
+        }
     });
     
     //new game
     post("/newGame", (req, res) -> {
         JSONObject o = new JSONObject();
+        lockedBoard = false;
         o.put("empty","");
         t.newGame();
         return o;
