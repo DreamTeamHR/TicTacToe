@@ -33,7 +33,7 @@ public class TicTacToeWeb implements SparkApplication
         int tileNo = (Integer.parseInt(tileNoS));
         t.playerMove(tileNo, t.getCurrPlayer());
         String play = t.getCurrPlayer() + "";
-        if(play == "X") {
+        if(t.getCurrPlayer() == 'X') {
           play = "/img/rick.png";
         } 
         else {
@@ -44,14 +44,19 @@ public class TicTacToeWeb implements SparkApplication
 
         //winner
         String endMessage = "";
-        boolean winner = false;
+        boolean lockedBoard = false;
 
         if(t.isWinner())
         {
-            endMessage = t.getCurrPlayer() + "";
-            endMessage += " is the winner!";
+            endMessage = "";
+            if(t.getCurrPlayer() == 'X') {
+                endMessage = "Rick is the winner!";
+            }
+            else {
+                endMessage = "Morty is the winner!";
+            }
             t.newGame();
-            winner = true; 
+            lockedBoard = true; 
             j.put("isOver", endMessage);
             return j; 
         }
@@ -60,6 +65,7 @@ public class TicTacToeWeb implements SparkApplication
         {
             endMessage = "Draw!";
             t.newGame();
+            lockedBoard = true; 
             j.put("isOver", endMessage);
             return j;
         }
@@ -67,7 +73,13 @@ public class TicTacToeWeb implements SparkApplication
         j.put("isOver", endMessage);
 
         t.changePlayer(t.getCurrPlayer());
-        String nextPlayer = t.getCurrPlayer() + " make a move";
+        String nextPlayer = "";
+        if(t.getCurrPlayer() == 'X') {
+            nextPlayer = "Rick make a move";
+        }
+        else {
+            nextPlayer = "Morty make a move";
+        }
         j.put("currPlayer", nextPlayer);
         return j;
     });
