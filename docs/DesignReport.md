@@ -21,12 +21,12 @@ The class diagram that was made before the implementation gave us an idea that w
 Considering the time limit we decided to develop a simple program that allows the user to play the game and offers him/her to play again at the end of a game. The state diagram below shows how this is implemented.
 
 
-## Class diagram before implementation
+### Class diagram before implementation
 ![ClassDiagram](http://oi67.tinypic.com/33xd56w.jpg)
 
-## Class diagram after implementation
+### Class diagram after implementation
 
 
-## State diagram
+### State diagram
 ![StateDiagram](http://oi63.tinypic.com/35hdxsi.jpg)
 				
