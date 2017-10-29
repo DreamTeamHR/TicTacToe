@@ -24,13 +24,16 @@ footer {
     padding: 15px 0px;
 }
 
-img {
-  top: 20px;
+.board-container img {
+    height: 160px;
+}
+
+.header img {
+    top: 20px;
 }
 
 .board-container {
-<<<<<<< HEAD
-    position: absolute;
+    position: center;
     width: 500px;
     height: 500px;
     left: 27%;
