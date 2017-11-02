@@ -1,7 +1,7 @@
 package is.ru.tictactoe;
 
 public class Board {
-	
+	//This is a comment for presentation	
 	private static char[][] board;
 	private static final int SIZE = 3;
 	private boolean winnerIs; //true for player1, false for player2
