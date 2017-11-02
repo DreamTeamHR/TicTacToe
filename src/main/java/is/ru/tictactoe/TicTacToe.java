@@ -57,6 +57,7 @@ public class TicTacToe {
 		if(board.checkColumns()) {
 			return true;
 		}
+		// Kynning
 		if(board.checkCross()) {
 			return true;
 		}
